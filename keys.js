@@ -1,6 +1,10 @@
 // This part is exporting through liri.js
 console.log('this is loaded');
 
+// This isn't right
+// require(".env").config()
+
+// Not sure how to format this
 exports.twitter = {
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
@@ -14,6 +18,4 @@ exports.spotify = {
 };
 
 // I don't know why this won't work...
-module.exports = {
-    exports: exports
-}
+module.exports = exports
