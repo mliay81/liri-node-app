@@ -1,17 +1,26 @@
 // Spotify, Twitter, dotenv, and request all installed
 
 require("dotenv").config();
-var twitter = require("twitter")
-var spotify = require("spotify")
-
-
 var keys = require("./keys.js");
-
-var spotify = new Spotify(exports.spotify)
-
-var client = new Twitter(exports.twitter)
+var twitter = require("twitter")
+// var spotify = require("spotify-finder")
 
 
-console.log(spotify)
+// console.log(spotify.consumer.key)
+// console.log(twitter.consumer_key)
 
-console.log(client)
+// This is pulling Twitter keys, don't screw with it
+var client = new twitter(keys.twitter)
+// console.log(client)
+
+client.stream('statuses/filter', {track: 'NotABot'},  function(stream) {
+    stream.on('data', function(tweet) {
+      console.log(tweet.text);
+    });
+  
+    stream.on('error', function(error) {
+      console.log(error);
+    });
+  });
+// var music = new spotify(keys.spotify)
+// console.log(music)
