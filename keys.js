@@ -10,11 +10,11 @@ var twitter = {
 };
 
 var spotify = {
-    key: process.env.SPOTIFY_ID,
+    id: process.env.SPOTIFY_ID,
     secret: process.env.SPOTIFY_SECRET
 }
 
-// var client = new Spotify({
+// var client = new spotify({
 //     consumer: {
 //         key: process.env.SPOTIFY_ID,
 //         secret: process.env.SPOTIFY_SECRET
