@@ -1,7 +1,4 @@
-// I was barely able to get any of this to work, so nothing is named the way it should be as called out
-// in the GitLab assignment page.
-
-
+// This was arduous.
 
 // Spotify, Twitter, dotenv, and request all installed
 
